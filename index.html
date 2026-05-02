@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toothbuds Kids & Family Dental Clinic | Book Appointment</title>
+    <meta
+      name="description"
+      content="Book an appointment at Toothbuds Kids & Family Dental Clinic, Chennai."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f4fff5",
+                100: "#e8fde9",
+                200: "#c8f8cb",
+                300: "#9cef9f",
+                400: "#69e36d",
+                500: "#40d646",
+                600: "#2eb834",
+                700: "#268f2b",
+                800: "#1f7123",
+                900: "#1b5f1f"
+              },
+              accent: {
+                50: "#eefdff",
+                100: "#cdf6ff",
+                200: "#9beeff",
+                300: "#5ee2ff",
+                400: "#21d4ff",
+                500: "#00c4ff",
+                600: "#009ac9",
+                700: "#007699",
+                800: "#075f79",
+                900: "#0a4e63"
+              }
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(11, 62, 112, 0.12)"
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-gradient-to-b from-brand-50 to-white text-slate-800 min-h-screen">
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      <section class="grid gap-6 lg:grid-cols-2">
+        <article class="rounded-3xl bg-white p-6 shadow-soft sm:p-8">
+          <div class="flex flex-col items-start gap-3">
+            <picture>
+              <source srcset="./assets/toothbuds-logo.png" type="image/png" />
+              <img
+                src="./assets/toothbuds-logo.svg"
+                alt="Toothbuds logo"
+                class="h-24 w-auto max-w-full object-contain sm:h-28"
+              />
+            </picture>
+            <div>
+              <h1 class="text-2xl font-bold text-brand-700 sm:text-3xl">Toothbuds Kids & Family Dental Clinic</h1>
+              <p class="mt-1 text-sm text-slate-600">Gentle dental care for kids and families in Chennai</p>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-3 text-sm sm:text-base">
+            <p><span class="font-semibold text-brand-800">Doctor:</span> Dr. Sunny Priyatham Tirupathi (BDS (Army CDS), MDS, PhD)</p>
+            <p><span class="font-semibold text-brand-800">Specialization:</span> Pediatric Dentistry</p>
+            <p><span class="font-semibold text-brand-800">Phone:</span> <a class="text-brand-700 underline" href="tel:+919490549454">+91-9490549454</a></p>
+            <p class="leading-relaxed">
+              <span class="font-semibold text-brand-800">Address:</span>
+              First Floor, No 2, Landmark, 160, Mount Poonamallee Rd, beside Fashor, Saminathan Nagar,
+              Kattupakkam, Chennai, Tamil Nadu 600056
+            </p>
+            <p>
+              <a
+                class="inline-flex items-center rounded-full bg-accent-100 px-4 py-2 text-sm font-semibold text-accent-800 hover:bg-accent-200"
+                href="https://share.google/68EFZWb9Wkok5EPk7"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open Google Maps
+              </a>
+            </p>
+          </div>
+        </article>
+
+        <article class="rounded-3xl bg-white p-6 shadow-soft sm:p-8">
+          <h2 class="text-xl font-bold text-brand-800 sm:text-2xl">Book an Appointment</h2>
+          <p class="mt-2 text-sm text-slate-600">All fields are mandatory. We will send a confirmation email after booking.</p>
+
+          <form id="appointmentForm" class="mt-6 space-y-4" novalidate>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="firstName" class="mb-1 block text-sm font-medium">First Name</label>
+                <input id="firstName" name="firstName" type="text" maxlength="50" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+              </div>
+              <div>
+                <label for="lastName" class="mb-1 block text-sm font-medium">Last Name</label>
+                <input id="lastName" name="lastName" type="text" maxlength="50" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+              </div>
+              <div>
+                <label for="email" class="mb-1 block text-sm font-medium">Email ID</label>
+                <input id="email" name="email" type="email" maxlength="120" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+              </div>
+              <div>
+                <label for="mobile" class="mb-1 block text-sm font-medium">Mobile Number</label>
+                <input id="mobile" name="mobile" type="tel" inputmode="numeric" maxlength="15" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+              </div>
+              <div>
+                <label for="age" class="mb-1 block text-sm font-medium">Age</label>
+                <input id="age" name="age" type="number" min="1" max="120" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+              </div>
+              <div>
+                <label for="gender" class="mb-1 block text-sm font-medium">Gender</label>
+                <select id="gender" name="gender" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required>
+                  <option value="">Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="serviceType" class="mb-1 block text-sm font-medium">Service Type</label>
+                <select id="serviceType" name="serviceType" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required>
+                  <option value="">Select Service</option>
+                  <option>Teeth Cleaning</option>
+                  <option>Root Canal Treatment</option>
+                  <option>Braces / Orthodontics</option>
+                  <option>Pediatric Dentistry</option>
+                  <option>Dental Implants</option>
+                  <option>Tooth Extraction</option>
+                  <option>General Consultation</option>
+                </select>
+              </div>
+              <div>
+                <label for="visitDate" class="mb-1 block text-sm font-medium">Date of Visit</label>
+                <input id="visitDate" name="visitDate" type="date" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="timeSlot" class="mb-1 block text-sm font-medium">Time Slot</label>
+                <select id="timeSlot" name="timeSlot" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required>
+                  <option value="">Select Time Slot</option>
+                  <option>09:00 AM - 10:00 AM</option>
+                  <option>10:00 AM - 11:00 AM</option>
+                  <option>11:00 AM - 12:00 PM</option>
+                  <option>04:00 PM - 05:00 PM</option>
+                  <option>05:00 PM - 06:00 PM</option>
+                  <option>06:00 PM - 07:00 PM</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="problemDescription" class="mb-1 block text-sm font-medium">Problem Description</label>
+                <textarea id="problemDescription" name="problemDescription" rows="4" maxlength="700" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required></textarea>
+              </div>
+            </div>
+
+            <div class="hidden" aria-hidden="true">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="text" autocomplete="off" tabindex="-1" />
+            </div>
+
+            <label class="flex items-start gap-2 text-sm">
+              <input id="consent" name="consent" type="checkbox" class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-300" required />
+              <span>I confirm that the details provided are accurate and I consent to being contacted for appointment scheduling.</span>
+            </label>
+
+            <button
+              id="submitBtn"
+              type="submit"
+              class="w-full rounded-xl bg-brand-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              Book Appointment
+            </button>
+
+            <p id="formMessage" class="hidden rounded-xl px-4 py-3 text-sm"></p>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/book-appointment.js": {
+      "runtime": "@vercel/node@3.2.0"
+    }
+  }
+}
