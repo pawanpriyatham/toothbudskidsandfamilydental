@@ -29,29 +29,27 @@
 
     setLoading(true);
     try {
-      var baseUrl = (window.APP_CONFIG && window.APP_CONFIG.API_BASE_URL) || "";
-      if (!baseUrl || baseUrl.indexOf("your-vercel-backend") !== -1) {
-        throw new Error("Backend URL is not configured. Update js/config.js");
+      var endpointUrl = (window.APP_CONFIG && window.APP_CONFIG.APPS_SCRIPT_WEB_APP_URL) || "";
+      if (!endpointUrl) {
+        throw new Error("Booking endpoint is not configured. Update js/config.js with your Google Apps Script URL.");
       }
 
-      var response = await fetch(baseUrl + "/api/book-appointment", {
+      var requestBody = new URLSearchParams();
+      Object.keys(payload).forEach(function (key) {
+        requestBody.append(key, payload[key]);
+      });
+
+      await fetch(endpointUrl, {
         method: "POST",
+        mode: "no-cors",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
         },
-        body: JSON.stringify(payload)
+        body: requestBody.toString()
       });
-
-      var result = await response.json().catch(function () {
-        return { message: "Unexpected server response." };
-      });
-
-      if (!response.ok) {
-        throw new Error(result.message || "Unable to submit appointment request.");
-      }
 
       form.reset();
-      showMessage("Appointment request submitted successfully. Please check your email for confirmation.", "success");
+      showMessage("Appointment request submitted successfully. Please check your email for confirmation. If you do not receive it shortly, please call the clinic.", "success");
     } catch (error) {
       showMessage(error.message || "Something went wrong. Please try again.", "error");
     } finally {
