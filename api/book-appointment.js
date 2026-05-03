@@ -208,7 +208,7 @@ function buildPatientEmailHtml(data) {
     <p><strong>Service:</strong> ${escapeHtml(data.serviceType)}</p>
     <p>Our team will contact you shortly to confirm your appointment.</p>
     <p>Phone: +91-9498098000</p>
-    <p>Address: First Floor, No 2, Landmark, 160, Mount Poonamallee Rd, Kattupakkam, Chennai - 600056</p>
+    <p>Address: First Floor, No 2, 160 Mount Poonamallee Rd, Landmark: beside Fashor, Saminathan Nagar, Kattupakkam, Chennai, Tamil Nadu 600056</p>
     <p>Regards,<br/>Toothbuds Team</p>
   `;
 }
