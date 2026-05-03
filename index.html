@@ -54,68 +54,7 @@
     <div class="min-h-screen flex items-center justify-center py-10">
       <main class="w-full mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8 xl:px-12">
         <section class="grid gap-6 lg:grid-cols-2 xl:grid-cols-4 lg:gap-8 xl:gap-12 items-stretch">
-          <!-- Doctor Frame -->
-          <article class="h-full rounded-3xl bg-white p-8 shadow-premium sm:p-10 lg:p-12 flex flex-col items-center sm:items-start text-center sm:text-left">
-            <img
-              src="./assets/doctor/doctor.png"
-              alt="Dr. Sunny Priyatham Tirupathi"
-              class="h-44 w-44 rounded-3xl object-cover shadow-md mb-6"
-            />
-            <h2 class="text-2xl font-bold tracking-tight text-brand-900">
-              Meet Dr. Sunny Priyatham
-            </h2>
-            <div class="mt-4 text-base leading-relaxed text-slate-700 space-y-4">
-              <p>
-                Dr. Sunny Priyatham is a dedicated dental professional with over <strong>13 years of experience in general dentistry</strong> and <strong>8 years of specialized experience in pediatric dentistry</strong>.
-              </p>
-              
-              <div>
-                <strong>Education</strong>
-                <ul class="list-disc pl-5 mt-1 space-y-1">
-                  <li>Bachelor of Dental Surgery (BDS) from Army College of Dental Sciences (2012)</li>
-                  <li>Master of Dental Surgery (MDS) in Pedodontics from Narayana Dental College and Hospital (2017)</li>
-                </ul>
-              </div>
-
-              <div>
-                <strong>Professional Experience</strong>
-                <ul class="list-disc pl-5 mt-1 space-y-1">
-                  <li>GDMO (Dental Officer) at CHC Diglipur under the Union Territory Health Mission (2012-2013)</li>
-                </ul>
-              </div>
-
-              <div>
-                <strong>Academic Positions</strong>
-                <ul class="list-disc pl-5 mt-1 space-y-1">
-                  <li>Assistant Professor at Malla Reddy Dental College and Hospital (2018-2020)</li>
-                  <li>Assistant Professor at Dr. D. Y. Patil Dental College and Hospital (2021-2024)</li>
-                </ul>
-              </div>
-
-              <div>
-                <strong>Current Role</strong>
-                <p class="mt-1">
-                  Associate Professor in the Department of Pedodontics at Saveetha Dental College and Hospital.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Clinic Pictures Square -->
-          <article class="h-full rounded-3xl bg-white p-6 shadow-premium sm:p-8 lg:p-10 flex flex-col items-center justify-start relative">
-            <h2 class="text-2xl font-bold tracking-tight text-brand-900 mb-6 text-center w-full">
-              Our Clinic
-            </h2>
-            <div class="relative w-full h-64 sm:h-80 lg:h-full flex-grow rounded-2xl overflow-hidden shadow-inner bg-slate-50 border border-slate-100">
-              <img
-                id="clinicSlideshow"
-                src="./assets/clinic-pictures/1.png"
-                alt="Clinic Interior"
-                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
-              />
-            </div>
-          </article>
-
+          <!-- Clinic Info Frame (Now 1st Frame) -->
           <article class="h-full rounded-3xl bg-white p-8 shadow-premium sm:p-10 lg:p-12">
           <div class="flex flex-col items-start gap-3">
             <picture>
@@ -184,6 +123,68 @@
           </div>
 
         </article>
+
+          <!-- Clinic Pictures Square (Unchanged 2nd Frame) -->
+          <article class="h-full rounded-3xl bg-white p-6 shadow-premium sm:p-8 lg:p-10 flex flex-col items-center justify-start relative">
+            <h2 class="text-2xl font-bold tracking-tight text-brand-900 mb-6 text-center w-full">
+              Our Clinic
+            </h2>
+            <div class="relative w-full h-64 sm:h-80 lg:h-full flex-grow rounded-2xl overflow-hidden shadow-inner bg-slate-50 border border-slate-100">
+              <img
+                id="clinicSlideshow"
+                src="./assets/clinic-pictures/1.png"
+                alt="Clinic Interior"
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
+              />
+            </div>
+          </article>
+
+          <!-- Doctor Frame (Now 3rd Frame) -->
+          <article class="h-full rounded-3xl bg-white p-8 shadow-premium sm:p-10 lg:p-12 flex flex-col items-center sm:items-start text-center sm:text-left">
+            <img
+              src="./assets/doctor/doctor.png"
+              alt="Dr. Sunny Priyatham Tirupathi"
+              class="h-44 w-44 rounded-3xl object-cover shadow-md mb-6"
+            />
+            <h2 class="text-2xl font-bold tracking-tight text-brand-900">
+              Meet Dr. Sunny Priyatham
+            </h2>
+            <div class="mt-4 text-base leading-relaxed text-slate-700 space-y-4">
+              <p>
+                Dr. Sunny Priyatham is a dedicated dental professional with over <strong>13 years of experience in general dentistry</strong> and <strong>8 years of specialized experience in pediatric dentistry</strong>.
+              </p>
+              
+              <div>
+                <strong>Education</strong>
+                <ul class="list-disc pl-5 mt-1 space-y-1">
+                  <li>Bachelor of Dental Surgery (BDS) from Army College of Dental Sciences (2012)</li>
+                  <li>Master of Dental Surgery (MDS) in Pedodontics from Narayana Dental College and Hospital (2017)</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>Professional Experience</strong>
+                <ul class="list-disc pl-5 mt-1 space-y-1">
+                  <li>GDMO (Dental Officer) at CHC Diglipur under the Union Territory Health Mission (2012-2013)</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>Academic Positions</strong>
+                <ul class="list-disc pl-5 mt-1 space-y-1">
+                  <li>Assistant Professor at Malla Reddy Dental College and Hospital (2018-2020)</li>
+                  <li>Assistant Professor at Dr. D. Y. Patil Dental College and Hospital (2021-2024)</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>Current Role</strong>
+                <p class="mt-1">
+                  Associate Professor in the Department of Pedodontics at Saveetha Dental College and Hospital.
+                </p>
+              </div>
+            </div>
+          </article>
 
         <article class="h-full rounded-3xl bg-white p-8 shadow-premium sm:p-10 lg:p-12">
           <h2 class="text-2xl font-bold tracking-tight text-brand-900 sm:text-3xl">
