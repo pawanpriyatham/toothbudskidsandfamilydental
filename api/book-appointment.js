@@ -207,7 +207,7 @@ function buildPatientEmailHtml(data) {
     <p><strong>Requested Visit:</strong> ${escapeHtml(data.visitDate)} | ${escapeHtml(data.timeSlot)}</p>
     <p><strong>Service:</strong> ${escapeHtml(data.serviceType)}</p>
     <p>Our team will contact you shortly to confirm your appointment.</p>
-    <p>Phone: +91-9490549454</p>
+    <p>Phone: +91-9498098000</p>
     <p>Address: First Floor, No 2, Landmark, 160, Mount Poonamallee Rd, Kattupakkam, Chennai - 600056</p>
     <p>Regards,<br/>Toothbuds Team</p>
   `;
