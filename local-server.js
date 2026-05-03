@@ -22,7 +22,7 @@ const MIME_TYPES = {
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
   ".json": "application/json; charset=utf-8",
-  ".ico": "image/x-icon"
+  ".ico": "image/x-icon",
 };
 
 const server = http.createServer(async (req, res) => {
@@ -38,7 +38,7 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  const requestedPath = url.pathname === "/" ? "/index.html" : url.pathname;
+  const requestedPath = url.pathname === "/" ? "/index.html" : decodeURIComponent(url.pathname);
   const safePath = path.normalize(requestedPath).replace(/^(\.\.[/\\])+/, "");
   const filePath = path.join(ROOT_DIR, safePath);
 
@@ -55,7 +55,10 @@ const server = http.createServer(async (req, res) => {
 
     const ext = path.extname(filePath).toLowerCase();
     res.statusCode = 200;
-    res.setHeader("Content-Type", MIME_TYPES[ext] || "application/octet-stream");
+    res.setHeader(
+      "Content-Type",
+      MIME_TYPES[ext] || "application/octet-stream",
+    );
     res.end(req.method === "HEAD" ? undefined : content);
   });
 });
@@ -87,7 +90,7 @@ async function handleApiRequest(req, res) {
     method: req.method,
     headers: req.headers,
     body: parsedBody,
-    socket: req.socket
+    socket: req.socket,
   };
 
   const adaptedRes = createResponseAdapter(res);
@@ -113,7 +116,7 @@ function createResponseAdapter(res) {
     end(payload) {
       res.end(payload);
       return this;
-    }
+    },
   };
 }
 

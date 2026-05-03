@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 const ADMIN_EMAILS = [
   "toothbudspediatricdentistry@gmail.com",
   "dr.priyatham@gmail.com",
-  "pawan.tirupathi@gmail.com"
+  "pawan.tirupathi@gmail.com",
 ];
 
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
@@ -26,7 +26,9 @@ module.exports = async (req, res) => {
 
   const ip = getClientIp(req);
   if (isRateLimited(ip)) {
-    return res.status(429).json({ message: "Too many requests. Please try again in a minute." });
+    return res
+      .status(429)
+      .json({ message: "Too many requests. Please try again in a minute." });
   }
 
   try {
@@ -44,14 +46,19 @@ module.exports = async (req, res) => {
 
     const fromEmail = process.env.FROM_EMAIL;
     const hasResend = Boolean(process.env.EMAIL_API_KEY);
-    const hasGmailSmtp = Boolean(process.env.SMTP_USER && process.env.SMTP_PASS);
+    const hasGmailSmtp = Boolean(
+      process.env.SMTP_USER && process.env.SMTP_PASS,
+    );
 
     if (!fromEmail || (!hasResend && !hasGmailSmtp)) {
-      return res.status(500).json({ message: "Server email configuration is missing." });
+      return res
+        .status(500)
+        .json({ message: "Server email configuration is missing." });
     }
 
     const adminSubject = `New Appointment Booking - ${payload.firstName} ${payload.lastName}`;
-    const patientSubject = "Appointment Request Received | Toothbuds Dental Clinic";
+    const patientSubject =
+      "Appointment Request Received | Toothbuds Dental Clinic";
 
     const adminHtml = buildAdminEmailHtml(payload);
     const patientHtml = buildPatientEmailHtml(payload);
@@ -61,21 +68,23 @@ module.exports = async (req, res) => {
         from: fromEmail,
         to: ADMIN_EMAILS,
         subject: adminSubject,
-        html: adminHtml
+        html: adminHtml,
       }),
       sendEmail({
         from: fromEmail,
         to: payload.email,
         subject: patientSubject,
-        html: patientHtml
+        html: patientHtml,
       }),
-      storeOptionalWebhook(payload)
+      storeOptionalWebhook(payload),
     ]);
 
-    return res.status(200).json({ message: "Appointment booked successfully." });
+    return res
+      .status(200)
+      .json({ message: "Appointment booked successfully." });
   } catch (error) {
     return res.status(500).json({
-      message: "Unable to process booking right now. Please try again later."
+      message: "Unable to process booking right now. Please try again later.",
     });
   }
 };
@@ -125,7 +134,7 @@ function validatePayload(payload) {
     "serviceType",
     "problemDescription",
     "visitDate",
-    "timeSlot"
+    "timeSlot",
   ];
 
   for (const key of required) {
@@ -211,7 +220,7 @@ async function storeOptionalWebhook(payload) {
   await fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
   });
 }
 
@@ -232,15 +241,15 @@ async function sendEmail({ from, to, subject, html }) {
       service: "gmail",
       auth: {
         user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
-      }
+        pass: process.env.SMTP_PASS,
+      },
     });
 
     return transporter.sendMail({
       from,
       to: smtpRecipients,
       subject,
-      html
+      html,
     });
   }
 
@@ -250,7 +259,7 @@ async function sendEmail({ from, to, subject, html }) {
       from,
       to,
       subject,
-      html
+      html,
     });
   }
 

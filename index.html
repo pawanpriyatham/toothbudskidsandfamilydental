@@ -24,7 +24,7 @@
                 600: "#2eb834",
                 700: "#268f2b",
                 800: "#1f7123",
-                900: "#1b5f1f"
+                900: "#1b5f1f",
               },
               accent: {
                 50: "#eefdff",
@@ -36,21 +36,87 @@
                 600: "#009ac9",
                 700: "#007699",
                 800: "#075f79",
-                900: "#0a4e63"
-              }
+                900: "#0a4e63",
+              },
             },
             boxShadow: {
-              soft: "0 10px 30px rgba(11, 62, 112, 0.12)"
-            }
-          }
-        }
+              soft: "0 8px 40px rgba(11, 62, 112, 0.08)",
+              premium: "0 20px 60px rgba(11, 62, 112, 0.05)",
+            },
+          },
+        },
       };
     </script>
   </head>
-  <body class="bg-gradient-to-b from-brand-50 to-white text-slate-800 min-h-screen">
-    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-      <section class="grid gap-6 lg:grid-cols-2">
-        <article class="rounded-3xl bg-white p-6 shadow-soft sm:p-8">
+  <body
+    class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-200"
+  >
+    <div class="min-h-screen flex items-center justify-center py-10">
+      <main class="w-full mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8 xl:px-12">
+        <section class="grid gap-6 lg:grid-cols-2 xl:grid-cols-4 lg:gap-8 xl:gap-12 items-stretch">
+          <!-- Doctor Frame -->
+          <article class="h-full rounded-3xl bg-white p-8 shadow-premium sm:p-10 lg:p-12 flex flex-col items-center sm:items-start text-center sm:text-left">
+            <img
+              src="./assets/doctor/doctor.png"
+              alt="Dr. Sunny Priyatham Tirupathi"
+              class="h-44 w-44 rounded-3xl object-cover shadow-md mb-6"
+            />
+            <h2 class="text-2xl font-bold tracking-tight text-brand-900">
+              Meet Dr. Sunny Priyatham
+            </h2>
+            <div class="mt-4 text-base leading-relaxed text-slate-700 space-y-4">
+              <p>
+                Dr. Sunny Priyatham is a dedicated dental professional with over <strong>13 years of experience in general dentistry</strong> and <strong>8 years of specialized experience in pediatric dentistry</strong>.
+              </p>
+              
+              <div>
+                <strong>Education</strong>
+                <ul class="list-disc pl-5 mt-1 space-y-1">
+                  <li>Bachelor of Dental Surgery (BDS) from Army College of Dental Sciences (2012)</li>
+                  <li>Master of Dental Surgery (MDS) in Pedodontics from Narayana Dental College and Hospital (2017)</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>Professional Experience</strong>
+                <ul class="list-disc pl-5 mt-1 space-y-1">
+                  <li>GDMO (Dental Officer) at CHC Diglipur under the Union Territory Health Mission (2012-2013)</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>Academic Positions</strong>
+                <ul class="list-disc pl-5 mt-1 space-y-1">
+                  <li>Assistant Professor at Malla Reddy Dental College and Hospital (2018-2020)</li>
+                  <li>Assistant Professor at Dr. D. Y. Patil Dental College and Hospital (2021-2024)</li>
+                </ul>
+              </div>
+
+              <div>
+                <strong>Current Role</strong>
+                <p class="mt-1">
+                  Associate Professor in the Department of Pedodontics at Saveetha Dental College and Hospital.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Clinic Pictures Square -->
+          <article class="h-full rounded-3xl bg-white p-6 shadow-premium sm:p-8 lg:p-10 flex flex-col items-center justify-start relative">
+            <h2 class="text-2xl font-bold tracking-tight text-brand-900 mb-6 text-center w-full">
+              Our Clinic
+            </h2>
+            <div class="relative w-full h-64 sm:h-80 lg:h-full flex-grow rounded-2xl overflow-hidden shadow-inner bg-slate-50 border border-slate-100">
+              <img
+                id="clinicSlideshow"
+                src="./assets/clinic-pictures/1.png"
+                alt="Clinic Interior"
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
+              />
+            </div>
+          </article>
+
+          <article class="h-full rounded-3xl bg-white p-8 shadow-premium sm:p-10 lg:p-12">
           <div class="flex flex-col items-start gap-3">
             <picture>
               <source srcset="./assets/toothbuds-logo.png" type="image/png" />
@@ -61,19 +127,39 @@
               />
             </picture>
             <div>
-              <h1 class="text-2xl font-bold text-brand-700 sm:text-3xl">Toothbuds Kids & Family Dental Clinic</h1>
-              <p class="mt-1 text-sm text-slate-600">Gentle dental care for kids and families in Chennai</p>
+              <h1 class="text-2xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+                Toothbuds Kids & Family Dental Clinic
+              </h1>
+              <p class="mt-2 text-base font-medium text-slate-600">
+                Gentle dental care for kids and families in Chennai
+              </p>
             </div>
           </div>
 
-          <div class="mt-6 space-y-3 text-sm sm:text-base">
-            <p><span class="font-semibold text-brand-800">Doctor:</span> Dr. Sunny Priyatham Tirupathi (BDS (Army CDS), MDS, PhD)</p>
-            <p><span class="font-semibold text-brand-800">Specialization:</span> Pediatric Dentistry</p>
-            <p><span class="font-semibold text-brand-800">Phone:</span> <a class="text-brand-700 underline" href="tel:+919490549454">+91-9490549454</a></p>
+          <div class="mt-8 space-y-4 text-base leading-relaxed text-slate-700">
+            <p>
+              <span class="font-semibold text-brand-800">Doctor:</span> Dr.
+              Sunny Priyatham Tirupathi (BDS (Army CDS), MDS, PhD)
+            </p>
+            <p>
+              <span class="font-semibold text-brand-800">Specialization:</span>
+              Pediatric Dentistry
+            </p>
+            <p>
+              <span class="font-semibold text-brand-800">Phone:</span>
+              <a class="text-brand-700 underline" href="tel:+919490549454"
+                >+91-9490549454</a
+              >
+            </p>
             <p class="leading-relaxed">
-              <span class="font-semibold text-brand-800">Address:</span>
-              First Floor, No 2, Landmark, 160, Mount Poonamallee Rd, beside Fashor, Saminathan Nagar,
-              Kattupakkam, Chennai, Tamil Nadu 600056
+              <span class="font-semibold text-brand-800">Address:</span><br>
+              First Floor, No 2,<br>
+              160 Mount Poonamallee Rd,<br>
+              <span class="font-medium text-slate-800">Landmark: beside Fashor,</span><br>
+              Saminathan Nagar,<br>
+              Kattupakkam,<br>
+              Chennai,<br>
+              Tamil Nadu 600056
             </p>
             <p>
               <a
@@ -85,66 +171,108 @@
                 Open Google Maps
               </a>
             </p>
-          </div>
-
-          <div class="mt-8 rounded-3xl bg-brand-50 p-5 sm:p-6">
-            <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
-              <img
-                src="./assets/doctor/doctor.png"
-                alt="Dr. Sunny Priyatham Tirupathi"
-                class="h-44 w-44 rounded-3xl object-cover shadow-soft"
+            <div class="pt-2 flex flex-col items-start w-full">
+              <p class="text-sm text-slate-600">
+                Appointment timings are from <strong>9 AM to 9 PM</strong> every day.
+              </p>
+              <img 
+                src="./assets/sign.png" 
+                alt="Doctor Signature" 
+                class="w-2/3 sm:w-3/5 md:w-1/2 h-auto object-contain mt-8 opacity-80 self-center" 
               />
-              <div>
-                <h2 class="text-xl font-bold text-brand-800">Meet Dr. Sunny Priyatham</h2>
-                <p class="mt-3 text-sm leading-7 text-slate-700 sm:text-base">
-                  Dr. Sunny Priyatham is a dedicated dental professional with over 13 years of experience in
-                  general dentistry and 8 years of specialized experience in pediatric dentistry. He completed
-                  his Bachelor of Dental Surgery (BDS) from Army College of Dental Sciences in 2012. He further
-                  pursued his Master of Dental Surgery (MDS) in Pedodontics from Narayana Dental College and
-                  Hospital under Dr. NTR University of Health Sciences, graduating in 2017. Dr. Sunny began his
-                  professional journey as a GDMO (Dental Officer) at CHC Diglipur in the Andaman and Nicobar
-                  Islands under the Union Territory Health Mission (2012-2013), where he gained valuable
-                  experience in community dental care. He has held key academic positions, including: Assistant
-                  Professor, Department of Pedodontics at Malla Reddy Dental College and Hospital (2018-2020)
-                  Assistant Professor, Department of Pedodontics at Dr. D. Y. Patil Dental College and Hospital
-                  (2021-2024) Currently, he serves as an Associate Professor in the Department of Pedodontics at
-                  Saveetha Dental College and Hospital, part of Saveetha Institute of Medical and Technical
-                  Sciences.
-                </p>
-              </div>
             </div>
           </div>
+
         </article>
 
-        <article class="rounded-3xl bg-white p-6 shadow-soft sm:p-8">
-          <h2 class="text-xl font-bold text-brand-800 sm:text-2xl">Book an Appointment</h2>
-          <p class="mt-2 text-sm text-slate-600">All fields are mandatory. We will send a confirmation email after booking.</p>
+        <article class="h-full rounded-3xl bg-white p-8 shadow-premium sm:p-10 lg:p-12">
+          <h2 class="text-2xl font-bold tracking-tight text-brand-900 sm:text-3xl">
+            Book an Appointment
+          </h2>
+          <p class="mt-2 text-sm text-slate-600">
+            All fields are mandatory. We will send a confirmation email after
+            booking.
+          </p>
 
           <form id="appointmentForm" class="mt-6 space-y-4" novalidate>
             <div class="grid gap-4 sm:grid-cols-2">
               <div>
-                <label for="firstName" class="mb-1 block text-sm font-medium">First Name</label>
-                <input id="firstName" name="firstName" type="text" maxlength="50" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+                <label for="firstName" class="mb-1 block text-sm font-medium"
+                  >First Name</label
+                >
+                <input
+                  id="firstName"
+                  name="firstName"
+                  type="text"
+                  maxlength="50"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                />
               </div>
               <div>
-                <label for="lastName" class="mb-1 block text-sm font-medium">Last Name</label>
-                <input id="lastName" name="lastName" type="text" maxlength="50" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+                <label for="lastName" class="mb-1 block text-sm font-medium"
+                  >Last Name</label
+                >
+                <input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  maxlength="50"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                />
               </div>
               <div>
-                <label for="email" class="mb-1 block text-sm font-medium">Email ID</label>
-                <input id="email" name="email" type="email" maxlength="120" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+                <label for="email" class="mb-1 block text-sm font-medium"
+                  >Email ID</label
+                >
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  maxlength="120"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                />
               </div>
               <div>
-                <label for="mobile" class="mb-1 block text-sm font-medium">Mobile Number</label>
-                <input id="mobile" name="mobile" type="tel" inputmode="numeric" maxlength="15" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+                <label for="mobile" class="mb-1 block text-sm font-medium"
+                  >Mobile Number</label
+                >
+                <input
+                  id="mobile"
+                  name="mobile"
+                  type="tel"
+                  inputmode="numeric"
+                  maxlength="15"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                />
               </div>
               <div>
-                <label for="age" class="mb-1 block text-sm font-medium">Age</label>
-                <input id="age" name="age" type="number" min="1" max="120" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+                <label for="age" class="mb-1 block text-sm font-medium"
+                  >Age</label
+                >
+                <input
+                  id="age"
+                  name="age"
+                  type="number"
+                  min="1"
+                  max="120"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                />
               </div>
               <div>
-                <label for="gender" class="mb-1 block text-sm font-medium">Gender</label>
-                <select id="gender" name="gender" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required>
+                <label for="gender" class="mb-1 block text-sm font-medium"
+                  >Gender</label
+                >
+                <select
+                  id="gender"
+                  name="gender"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                >
                   <option value="">Select Gender</option>
                   <option>Male</option>
                   <option>Female</option>
@@ -152,8 +280,15 @@
                 </select>
               </div>
               <div>
-                <label for="serviceType" class="mb-1 block text-sm font-medium">Service Type</label>
-                <select id="serviceType" name="serviceType" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required>
+                <label for="serviceType" class="mb-1 block text-sm font-medium"
+                  >Service Type</label
+                >
+                <select
+                  id="serviceType"
+                  name="serviceType"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                >
                   <option value="">Select Service</option>
                   <option>Teeth Cleaning</option>
                   <option>Root Canal Treatment</option>
@@ -165,12 +300,27 @@
                 </select>
               </div>
               <div>
-                <label for="visitDate" class="mb-1 block text-sm font-medium">Date of Visit</label>
-                <input id="visitDate" name="visitDate" type="date" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required />
+                <label for="visitDate" class="mb-1 block text-sm font-medium"
+                  >Date of Visit</label
+                >
+                <input
+                  id="visitDate"
+                  name="visitDate"
+                  type="date"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                />
               </div>
               <div class="sm:col-span-2">
-                <label for="timeSlot" class="mb-1 block text-sm font-medium">Time Slot</label>
-                <select id="timeSlot" name="timeSlot" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required>
+                <label for="timeSlot" class="mb-1 block text-sm font-medium"
+                  >Time Slot</label
+                >
+                <select
+                  id="timeSlot"
+                  name="timeSlot"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                >
                   <option value="">Select Time Slot</option>
                   <option>09:00 AM - 10:00 AM</option>
                   <option>10:00 AM - 11:00 AM</option>
@@ -181,25 +331,51 @@
                 </select>
               </div>
               <div class="sm:col-span-2">
-                <label for="problemDescription" class="mb-1 block text-sm font-medium">Problem Description</label>
-                <textarea id="problemDescription" name="problemDescription" rows="4" maxlength="700" class="w-full rounded-xl border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200" required></textarea>
+                <label
+                  for="problemDescription"
+                  class="mb-1 block text-sm font-medium"
+                  >Problem Description</label
+                >
+                <textarea
+                  id="problemDescription"
+                  name="problemDescription"
+                  rows="4"
+                  maxlength="700"
+                  class="w-full rounded-xl border border-slate-300 bg-slate-50/50 px-4 py-3 text-sm text-slate-900 transition-all focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 shadow-sm"
+                  required
+                ></textarea>
               </div>
             </div>
 
             <div class="hidden" aria-hidden="true">
               <label for="website">Website</label>
-              <input id="website" name="website" type="text" autocomplete="off" tabindex="-1" />
+              <input
+                id="website"
+                name="website"
+                type="text"
+                autocomplete="off"
+                tabindex="-1"
+              />
             </div>
 
             <label class="flex items-start gap-2 text-sm">
-              <input id="consent" name="consent" type="checkbox" class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-300" required />
-              <span>I confirm that the details provided are accurate and I consent to being contacted for appointment scheduling.</span>
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-300"
+                required
+              />
+              <span
+                >I confirm that the details provided are accurate and I consent
+                to being contacted for appointment scheduling.</span
+              >
             </label>
 
             <button
               id="submitBtn"
               type="submit"
-              class="w-full rounded-xl bg-brand-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
+              class="w-full rounded-xl bg-brand-700 px-5 py-4 text-base font-bold text-white shadow-md transition-all hover:bg-brand-800 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-brand-500/30 disabled:cursor-not-allowed disabled:opacity-60"
             >
               Book Appointment
             </button>
@@ -208,8 +384,28 @@
           </form>
         </article>
       </section>
-    </main>
+      </main>
+    </div>
 
+    <script>
+      (function() {
+        var currentPic = 1;
+        var maxPics = 17;
+        var slideImg = document.getElementById("clinicSlideshow");
+        if (slideImg) {
+          setInterval(function() {
+            slideImg.style.opacity = 0;
+            setTimeout(function() {
+              currentPic = currentPic >= maxPics ? 1 : currentPic + 1;
+              slideImg.onload = function() {
+                slideImg.style.opacity = 1;
+              };
+              slideImg.src = "./assets/clinic-pictures/" + currentPic + ".png";
+            }, 1000); // matches the duration-1000 class (1 second fade out)
+          }, 4000); // Change image every 4 seconds
+        }
+      })();
+    </script>
     <script src="./js/config.js"></script>
     <script src="./js/app.js"></script>
   </body>

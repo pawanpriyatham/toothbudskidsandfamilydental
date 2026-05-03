@@ -29,9 +29,12 @@
 
     setLoading(true);
     try {
-      var endpointUrl = (window.APP_CONFIG && window.APP_CONFIG.APPS_SCRIPT_WEB_APP_URL) || "";
+      var endpointUrl =
+        (window.APP_CONFIG && window.APP_CONFIG.APPS_SCRIPT_WEB_APP_URL) || "";
       if (!endpointUrl) {
-        throw new Error("Booking endpoint is not configured. Update js/config.js with your Google Apps Script URL.");
+        throw new Error(
+          "Booking endpoint is not configured. Update js/config.js with your Google Apps Script URL.",
+        );
       }
 
       var requestBody = new URLSearchParams();
@@ -43,15 +46,21 @@
         method: "POST",
         mode: "no-cors",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
-        body: requestBody.toString()
+        body: requestBody.toString(),
       });
 
       form.reset();
-      showMessage("Appointment request submitted successfully. Please check your email for confirmation. If you do not receive it shortly, please call the clinic.", "success");
+      showMessage(
+        "Appointment request submitted successfully. Please check your email for confirmation. If you do not receive it shortly, please call the clinic.",
+        "success",
+      );
     } catch (error) {
-      showMessage(error.message || "Something went wrong. Please try again.", "error");
+      showMessage(
+        error.message || "Something went wrong. Please try again.",
+        "error",
+      );
     } finally {
       setLoading(false);
     }
@@ -67,11 +76,13 @@
       age: String(formData.get("age") || "").trim(),
       gender: String(formData.get("gender") || "").trim(),
       serviceType: String(formData.get("serviceType") || "").trim(),
-      problemDescription: String(formData.get("problemDescription") || "").trim(),
+      problemDescription: String(
+        formData.get("problemDescription") || "",
+      ).trim(),
       visitDate: String(formData.get("visitDate") || "").trim(),
       timeSlot: String(formData.get("timeSlot") || "").trim(),
       consent: formData.get("consent") === "on",
-      website: String(formData.get("website") || "").trim()
+      website: String(formData.get("website") || "").trim(),
     };
   }
 
@@ -86,7 +97,7 @@
       "serviceType",
       "problemDescription",
       "visitDate",
-      "timeSlot"
+      "timeSlot",
     ];
 
     for (var i = 0; i < required.length; i += 1) {
@@ -117,7 +128,13 @@
 
   function showMessage(text, type) {
     messageBox.textContent = text;
-    messageBox.classList.remove("hidden", "bg-red-50", "text-red-700", "bg-green-50", "text-green-700");
+    messageBox.classList.remove(
+      "hidden",
+      "bg-red-50",
+      "text-red-700",
+      "bg-green-50",
+      "text-green-700",
+    );
     if (type === "success") {
       messageBox.classList.add("bg-green-50", "text-green-700");
     } else {
